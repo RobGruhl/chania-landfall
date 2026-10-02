@@ -1,6 +1,6 @@
 // Chania Landfall service worker: keeps the pages on the phone, plus any map tiles and fonts
 // already seen, so the tour still opens when the signal drops in the old town's alleys.
-const VERSION = '6d572cacbe4c';
+const VERSION = '748e38739c91';
 const SHELL = 'chania-shell-' + VERSION;
 const TILES = 'chania-tiles';
 const FONTS = 'chania-fonts';
