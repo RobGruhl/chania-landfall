@@ -29,7 +29,7 @@
   "lon": 24.02028,
   "aud": "agora",
   "sub": "Cross-shaped 1913 market hall, closed for restoration until December. Shuttles and bus 13 stop near here.",
-  "blurb": "The cruciform covered market, built in 1911 to 1913 on the line of the Venetian walls, is still shut for its long restoration (reopening announced for 4 December 2026), so see it from outside. Shuttles usually set down here or by the Kydonias bus station and 1866 Square a few minutes south-west: check where yours stops and when the last one leaves. From here it is about ten minutes downhill to the harbour.",
+  "blurb": "The cruciform covered market, built in 1911 to 1913 on the line of the Venetian walls, is still shut for its long restoration (a reopening has been announced for December 2026), so see it from outside. Shuttles usually set down here or by the Kydonias bus station and 1866 Square a few minutes south-west: check where yours stops and when the last one leaves. From here it is about ten minutes downhill to the harbour.",
   "hours": "Closed for restoration; outside only",
   "src": "https://www.argophilia.com/news/chania-municipal-market-reopening-december-4/251918/"
  },
@@ -95,7 +95,7 @@
   "lon": 24.0167,
   "aud": "lighthouse",
   "sub": "Out along the breakwater to the lighthouse. About 600 m each way; skip it in a storm or spray.",
-  "blurb": "The Venetians lit the harbour mouth in the 16th century; the slim stone tower you see was rebuilt by the Egyptian administration of Crete around 1839, which is why it looks a little like a minaret. Walk the breakwater from the east side of the harbour for the classic view back over the whole Venetian waterfront. Uneven stone, no railings, slippery when wet.",
+  "blurb": "The Venetians lit the harbour mouth in the 16th century. The slim stone tower you see was rebuilt in the 19th century, by local tradition under the Egyptian administration of Crete around 1839 (other sources say 1864); its octagonal base, sixteen-sided middle and round top are why people compare it to a minaret. Walk the breakwater from the east side of the harbour for the classic view back over the whole Venetian waterfront. Uneven stone, no railings, slippery when wet.",
   "dnd": "The beacon at the end of the mole: the last thing a homecoming galley saw.",
   "hours": "Breakwater open; the tower itself is not",
   "src": "https://www.oreotravel.com/blog/chania-lighthouse/"
@@ -111,7 +111,7 @@
   "lon": 24.01852,
   "aud": "mosque",
   "sub": "The domed mosque on the harbour, the oldest Ottoman building on Crete.",
-  "blurb": "Built just after the Ottoman conquest of 1645 and named for the town's first Ottoman commander, the \"mosque by the sea\" lost its minaret in the 1920s but kept its domes. It now opens only for exhibitions.",
+  "blurb": "Built just after the Ottoman conquest of 1645 and named for Küçük (\"Little\") Hasan, given as the town's first Ottoman commander, the \"mosque by the sea\" lost its minaret in the 20th century but kept its domes. It now opens only for exhibitions.",
   "hours": "Opens only for exhibitions; look for a sign",
   "src": "https://chaniahistory.gr/en/giali-tzamisi/"
  },
@@ -223,7 +223,7 @@
   "lat": 35.50007,
   "lon": 24.06121,
   "sub": "Commonwealth graves of the Battle of Crete, 1941, by the bay.",
-  "blurb": "About 1.5 km from the port, on the water. Over 1,500 Commonwealth burials, many from the Battle of Crete in May 1941.",
+  "blurb": "About 1.5 km from the port, on the water. About 1,500 Commonwealth burials, most from the Battle of Crete in May 1941: British, New Zealand and Australian above all, many unidentified.",
   "src": "https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/2017000/suda-bay-war-cemetery/"
  },
  {
