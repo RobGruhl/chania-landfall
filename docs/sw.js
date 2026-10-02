@@ -1,6 +1,6 @@
 // Chania Landfall service worker: keeps the pages on the phone, plus any map tiles and fonts
 // already seen, so the tour still opens when the signal drops in the old town's alleys.
-const VERSION = '957cac0cb710';
+const VERSION = '77d6fd06edb3';
 const SHELL = 'chania-shell-' + VERSION;
 const TILES = 'chania-tiles';
 const FONTS = 'chania-fonts';
@@ -16,10 +16,24 @@ self.addEventListener('activate', e => {
   )).then(() => self.clients.claim()));
 });
 
-// Answer from the phone at once, refresh the copy in the background when there is signal.
+// Pages: fresh from the network when there is signal (3 s grace), the phone's copy when not.
+async function page(req) {
+  const cache = await caches.open(SHELL);
+  try {
+    const res = await Promise.race([fetch(req, {cache: 'no-cache'}), new Promise((_, no) => setTimeout(() => no(new Error('slow')), 3000))]);
+    if (res.ok) cache.put(req, res.clone());
+    return res;
+  } catch (e) {
+    const hit = await cache.match(req, {ignoreSearch: true});
+    if (hit) return hit;
+    return fetch(req);
+  }
+}
+
+// Fonts: the phone's copy at once, refreshed in the background.
 async function stale(cacheName, req, event) {
   const cache = await caches.open(cacheName);
-  const hit = await cache.match(req, {ignoreSearch: cacheName === SHELL, ignoreVary: true});
+  const hit = await cache.match(req, {ignoreVary: true});
   const refresh = fetch(req).then(res => { if (res.ok || res.type === 'opaque') cache.put(req, res.clone()); return res; });
   if (hit) { event.waitUntil(refresh.catch(() => {})); return hit; }
   return refresh;
@@ -43,5 +57,5 @@ self.addEventListener('fetch', e => {
   if (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') { e.respondWith(stale(FONTS, req, e)); return; }
   const base = new URL(self.registration.scope);
   if (url.origin !== base.origin || !url.pathname.startsWith(base.pathname)) return;
-  e.respondWith(stale(SHELL, req, e));
+  e.respondWith(page(req));
 });
