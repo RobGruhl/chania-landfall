@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Chania Landfall · Reader</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chania">
+<script>if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost'))navigator.serviceWorker.register('sw.js').catch(function(){});</script>
+<style>
+:root{--bg:#FAF8F3;--ink:#1F2429;--muted:#6B7078;--hair:#DDD8CE;--bar:#F2EFE7;--accent:#1F6F8B;--fs:19px}
+:root[data-theme="sepia"]{--bg:#F4ECD8;--ink:#3B2F22;--muted:#7A6A55;--hair:#DDD1B4;--bar:#EADFC4;--accent:#8B3A2F}
+:root[data-theme="dark"]{--bg:#121416;--ink:#E6E2DA;--muted:#9A9A94;--hair:#2A2E33;--bar:#1B1E22;--accent:#8FC9E0}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--bg:#121416;--ink:#E6E2DA;--muted:#9A9A94;--hair:#2A2E33;--bar:#1B1E22;--accent:#8FC9E0}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Iowan Old Style","Palatino Linotype",Palatino,Charter,Georgia,"Times New Roman",serif;font-size:var(--fs);line-height:1.55}
+.ui{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.bar{position:sticky;top:0;z-index:5;padding:8px 10px;padding-top:calc(8px + env(safe-area-inset-top));background:var(--bar);border-bottom:1px solid var(--hair);font-size:14px}
+.bar button,.foot button,.seg button{appearance:none;border:1px solid var(--hair);background:transparent;color:var(--ink);font:inherit;border-radius:8px;padding:7px 10px;cursor:pointer;min-height:36px}
+.seg{display:inline-flex;border:1px solid var(--hair);border-radius:8px;overflow:hidden}
+.seg button{border:0;border-radius:0;min-width:44px;padding:7px 9px}
+.seg button+button{border-left:1px solid var(--hair)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.bar .row1{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.bar .grow{flex:1}
+.bar .mapbtn{display:inline-flex;align-items:center;border:1px solid var(--hair);border-radius:8px;padding:7px 12px;min-height:36px;color:var(--ink);text-decoration:none}
+.bar .fs button{font-family:Georgia,serif;min-width:38px}
+.bar .fs button:first-child{font-size:12px}.bar .fs button:last-child{font-size:18px;font-weight:bold}
+main{max-width:38em;margin:0 auto;padding:22px 20px 40px}
+.eyebrow{font-size:.7em;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:1.45em;line-height:1.2;margin:.25em 0 .2em;font-weight:700}
+.place{color:var(--muted);font-style:italic;font-size:.9em;margin:0 0 1em}
+p{margin:0 0 1em;hyphens:auto;-webkit-hyphens:auto}
+.foot{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:2em 0 0;padding-top:1em;border-top:1px solid var(--hair);font-size:14px}
+.foot button{flex:1;text-align:center;padding:12px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.foot button:disabled{opacity:.35}
+.sheet{position:fixed;inset:0;background:var(--bg);z-index:10;overflow:auto;padding:12px 16px 40px;padding-top:calc(12px + env(safe-area-inset-top));font-size:15px}
+.sheet .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.sheet .top button{appearance:none;border:1px solid var(--hair);background:transparent;color:var(--ink);font:inherit;border-radius:8px;padding:7px 12px}
+.sheet .lbl{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.sheet .seg{display:flex}.sheet .seg button{flex:1}
+.sheet ol{list-style:none;margin:6px 0 0;padding:0}
+.sheet li{border-bottom:1px solid var(--hair)}
+.sheet li button{display:flex;gap:12px;width:100%;text-align:left;appearance:none;border:0;background:transparent;color:var(--ink);font:inherit;padding:12px 4px;cursor:pointer;align-items:baseline}
+.sheet li button .n{font-variant-numeric:tabular-nums;color:var(--muted);min-width:2ch}
+.sheet li button .t{flex:1}
+.sheet li button .d{color:var(--muted);font-size:13px}
+.sheet li[aria-current="true"] button .t{color:var(--accent);font-weight:600}
+.sheet .note{color:var(--muted);font-size:13px;margin:16px 0 0}
+</style>
+</head>
+<body>
+<div class="bar ui" role="toolbar" aria-label="Reader controls">
+  <div class="row1">
+    <button type="button" id="tocbtn" aria-label="Contents and settings">☰ <span id="whoname">Rob</span></button>
+    <a class="mapbtn" id="mapbtn" href="index.html">Map</a>
+    <span class="grow"></span>
+    <span class="seg" id="lenseg" role="group" aria-label="Version"><button type="button" data-len="short">Short</button><button type="button" data-len="long">Long</button></span>
+    <span class="fs seg" role="group" aria-label="Text size"><button type="button" id="fsdown" aria-label="Smaller text">A</button><button type="button" id="fsup" aria-label="Larger text">A</button></span>
+  </div>
+</div>
+<main id="main"></main>
+<div class="sheet ui" id="sheet" hidden>
+  <div class="top"><strong id="sheettitle">Contents</strong><button type="button" id="closesheet">Done</button></div>
+  <div class="lbl">Track</div>
+  <div class="seg" role="group" aria-label="Track"><button type="button" data-who="rob">Rob's track</button><button type="button" data-who="jamie">Jamie's track</button></div>
+  <div class="lbl">Theme</div>
+  <div class="seg" role="group" aria-label="Theme"><button type="button" data-theme="light">Light</button><button type="button" data-theme="sepia">Sepia</button><button type="button" data-theme="dark">Dark</button><button type="button" data-theme="">Auto</button></div>
+  <div class="lbl">Stops</div>
+  <ol id="toc"></ol>
+  <p class="note">One stop per page. Short is a minute's read at the spot; Long is the full story, three to five minutes. The Map button returns to this stop on the map. Swipe or use the buttons at the bottom to change stop. Once a page has opened, it keeps working without signal.</p>
+</div>
+<script>
+const STOPS = {"rob":[],"jamie":[]};
+const PLACES = {"souda":"Souda Bay (the cruise quay)","agora":"Market Hall (Agora), the shuttle end","splantzia":"Splantzia: Plateia 1821 and Agios Nikolaos","kastelli":"Kastelli hill: Minoan Kydonia","neoria":"The Venetian shipyards (Neoria) and the ship Minoa","lighthouse":"The lighthouse","mosque":"Kioutsouk Hasan mosque (Yiali Tzamisi)","firkas":"Firkas fortress and the Maritime Museum of Crete","synagogue":"Etz Hayyim synagogue","museum":"Archaeological Museum of Chania (Chalepa)"};
+const NAMES = {rob:'Rob', jamie:'Jamie'};
+const store = {get(k,d){try{const v=localStorage.getItem(k);return v==null?d:v}catch(e){return d}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const FS = [15,16,17,18,19,20,22,24,26,28];
+let who='rob', idx=0, len='long';
+function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function pressed(sel,attr,val){document.querySelectorAll(sel).forEach(b=>b.setAttribute('aria-pressed',String((b.dataset[attr]||'')===val)));}
+function applyFont(){const fs=Number(store.get('chaniaFont',19));document.documentElement.style.setProperty('--fs',fs+'px');document.getElementById('fsdown').disabled=fs<=FS[0];document.getElementById('fsup').disabled=fs>=FS[FS.length-1];}
+function stepFont(d){const fs=Number(store.get('chaniaFont',19));let i=FS.indexOf(fs);if(i<0)i=4;i=Math.max(0,Math.min(FS.length-1,i+d));store.set('chaniaFont',FS[i]);applyFont();}
+function applyTheme(){const t=store.get('chaniaTheme','');if(t)document.documentElement.setAttribute('data-theme',t);else document.documentElement.removeAttribute('data-theme');pressed('.sheet [data-theme]','theme',t);}
+function setLen(l){len=l;store.set('chaniaLen',l);pressed('.bar [data-len]','len',l);render();}
+function parseHash(){const m=location.hash.match(/^#(rob|jamie)(?:\/([a-z0-9-]+))?/);if(m){who=m[1];const k=m[2]||'';const bySlug=STOPS[who].findIndex(s=>s.slug===k);idx=bySlug>=0?bySlug:(/^\d+$/.test(k)?Math.max(0,Math.min(STOPS[who].length-1,Number(k)-1)):Number(store.get('chaniaPos:'+who,0))||0);return;}const q=new URLSearchParams(location.search).get('as');who=(q==='jamie'||q==='rob')?q:store.get('chaniaWho','rob');if(!(who in STOPS))who='rob';idx=Number(store.get('chaniaPos:'+who,0))||0;}
+function go(w,i,opts){opts=opts||{};who=w;idx=Math.max(0,Math.min(STOPS[w].length-1,i));store.set('chaniaPos:'+w,idx);store.set('chaniaWho',w);const h='#'+w+'/'+STOPS[w][idx].slug;if(opts.push===false)history.replaceState(null,'',h);else history.pushState(null,'',h);render();window.scrollTo(0,0);}
+function num(s){return String(s.n).padStart(2,'0');}
+function words(t){return (t||'').split(/\s+/).filter(Boolean).length;}
+function render(){
+  const list=STOPS[who], s=list[idx];
+  document.getElementById('whoname').textContent=NAMES[who];
+  document.getElementById('mapbtn').href='index.html#at/'+s.slug;
+  document.title=`${num(s)} ${s.title} · ${NAMES[who]} · Chania Landfall`;
+  const text=len==='short'?s.short:s.long;
+  const head=`<div class="eyebrow">${NAMES[who]}'s track · stop ${s.n} of ${list.length} · ${len==='short'?'short':'long'} · ${Math.max(1,Math.round(words(text)/200))} min read</div><h1>${esc(s.title)}</h1>${PLACES[s.slug]?`<p class="place">${esc(PLACES[s.slug])}</p>`:''}`;
+  const body=text.split(/\n+/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('');
+  const foot=`<div class="foot ui"><button type="button" id="prev" ${idx===0?'disabled':''}>‹ ${idx>0?esc(list[idx-1].title):'Start'}</button><button type="button" id="next" ${idx===list.length-1?'disabled':''}>${idx<list.length-1?esc(list[idx+1].title):'End'} ›</button></div>`;
+  document.getElementById('main').innerHTML=head+body+foot;
+  document.getElementById('prev').onclick=()=>go(who,idx-1);
+  document.getElementById('next').onclick=()=>go(who,idx+1);
+  pressed('.sheet [data-who]','who',who);
+  buildToc();
+}
+function buildToc(){const ol=document.getElementById('toc');ol.innerHTML='';document.getElementById('sheettitle').textContent=NAMES[who]+"'s track";STOPS[who].forEach((s,i)=>{const li=document.createElement('li');li.setAttribute('aria-current',String(i===idx));li.innerHTML=`<button type="button"><span class="n">${num(s)}</span><span class="t">${esc(s.title)}</span><span class="d">${Math.max(1,Math.round(words(s.long)/200))} min</span></button>`;li.querySelector('button').onclick=()=>{closeSheet();go(who,i);};ol.appendChild(li);});}
+function openSheet(){buildToc();document.getElementById('sheet').hidden=false;}
+function closeSheet(){document.getElementById('sheet').hidden=true;}
+document.getElementById('tocbtn').onclick=openSheet;
+document.getElementById('closesheet').onclick=closeSheet;
+document.getElementById('fsdown').onclick=()=>stepFont(-1);
+document.getElementById('fsup').onclick=()=>stepFont(1);
+document.querySelectorAll('.bar [data-len]').forEach(b=>b.onclick=()=>setLen(b.dataset.len));
+document.querySelectorAll('.sheet [data-who]').forEach(b=>b.onclick=()=>{const w=b.dataset.who;closeSheet();go(w,Number(store.get('chaniaPos:'+w,0))||0);});
+document.querySelectorAll('.sheet [data-theme]').forEach(b=>b.onclick=()=>{store.set('chaniaTheme',b.dataset.theme||'');applyTheme();});
+window.addEventListener('popstate',()=>{parseHash();render();});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(who,idx+1);if(e.key==='ArrowLeft')go(who,idx-1);});
+let tx=null,ty=null;document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY;},{passive:true});
+document.addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=ty=null;if(!document.getElementById('sheet').hidden)return;if(Math.abs(dx)>90&&Math.abs(dy)<60){if(dx<0)go(who,idx+1);else go(who,idx-1);}},{passive:true});
+applyFont();applyTheme();
+len=store.get('chaniaLen','long');pressed('.bar [data-len]','len',len);
+parseHash();
+go(who,idx,{push:false});
+</script>
+</body>
+</html>

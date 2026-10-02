@@ -1,0 +1,238 @@
+[
+ {
+  "n": 1,
+  "cat": "route",
+  "also": [
+   "practical",
+   "history"
+  ],
+  "name": "Souda Bay (the cruise quay)",
+  "lat": 35.48979,
+  "lon": 24.07291,
+  "aud": "souda",
+  "offroute": true,
+  "sub": "Where the ship ties up, 7 km east of the old town. Read this one on the shuttle.",
+  "blurb": "One of the great natural harbours of the Mediterranean, a deep bay sheltered between the Akrotiri peninsula and the mainland. Venice held the fortress islet at its mouth long after Chania fell; in 1941 the bay was the British fleet anchorage the Germans bombed during the Battle of Crete, and the Commonwealth war cemetery sits on its shore. Today it is also a NATO naval base, so expect warships across the water.",
+  "dnd": "The deep-water anchorage every fleet in the sea has wanted, guarded by a rock that refused to surrender.",
+  "hours": "Ashore 08:00 to 18:00. Shuttle or city bus 13 (about every 20 minutes, about 25 minutes, €1.60 at a kiosk, €2.50 on board).",
+  "src": "https://www.greeka.com/crete/chania/ports/"
+ },
+ {
+  "n": 2,
+  "cat": "route",
+  "also": [
+   "practical"
+  ],
+  "origin": true,
+  "name": "Market Hall (Agora), the shuttle end",
+  "lat": 35.5145,
+  "lon": 24.02028,
+  "aud": "agora",
+  "sub": "Cross-shaped 1913 market hall, closed for restoration until December. Shuttles and bus 13 stop near here.",
+  "blurb": "The cruciform covered market, built in 1911 to 1913 on the line of the Venetian walls, is still shut for its long restoration (reopening announced for 4 December 2026), so see it from outside. Shuttles usually set down here or by the Kydonias bus station and 1866 Square a few minutes south-west: check where yours stops and when the last one leaves. From here it is about ten minutes downhill to the harbour.",
+  "hours": "Closed for restoration; outside only",
+  "src": "https://www.argophilia.com/news/chania-municipal-market-reopening-december-4/251918/"
+ },
+ {
+  "n": 3,
+  "cat": "route",
+  "also": [
+   "history",
+   "coffee"
+  ],
+  "name": "Splantzia: Plateia 1821 and Agios Nikolaos",
+  "lat": 35.51641,
+  "lon": 24.02228,
+  "aud": "splantzia",
+  "sub": "A church with a minaret on one side and a bell tower on the other, under a big plane tree.",
+  "blurb": "The square of the Turkish quarter. Agios Nikolaos began as a Dominican church under Venice, became the sultan's mosque after 1645, and became Orthodox again in 1918, so it carries both a minaret and a bell tower. Coffee or a raki under the plane tree at Platanos is the old-town ritual.",
+  "dnd": "The temple that changed gods three times and kept a tower for each.",
+  "hours": "Church usually open by day, free; dress modestly",
+  "src": "https://en.wikipedia.org/wiki/Agios_Nikolaos_Church_(Chania)"
+ },
+ {
+  "n": 4,
+  "cat": "route",
+  "also": [
+   "minoan"
+  ],
+  "name": "Kastelli hill: Minoan Kydonia",
+  "lat": 35.51712,
+  "lon": 24.01978,
+  "aud": "kastelli",
+  "sub": "The oldest Chania: Minoan houses behind the fences on Kanevaro Street.",
+  "blurb": "The low hill above the harbour is where the city began. The Greek-Swedish excavations in Agia Aikaterini square and along Kanevaro Street opened Minoan Kydonia: house walls, a hearth beside a loom, burnt lentils, and a fire-baked archive of Linear A tablets that nobody can yet read. The clay \"Master Impression\" seal, a giant figure over a walled town by the sea, was found here. Byzantine and Venetian walls sit on top.",
+  "dnd": "Under the castle, the ruins of a city whose library survived only because it burned.",
+  "hours": "Excavations seen through fences, free, any time",
+  "src": "https://en.wikipedia.org/wiki/Kastelli_(Chania)"
+ },
+ {
+  "n": 5,
+  "cat": "route",
+  "also": [
+   "history",
+   "minoan"
+  ],
+  "name": "The Venetian shipyards (Neoria) and the ship Minoa",
+  "lat": 35.51815,
+  "lon": 24.02132,
+  "aud": "neoria",
+  "sub": "Vaulted 16th-century galley sheds; one holds a rowed replica of a Minoan ship.",
+  "blurb": "The long stone vaults on the east harbour are the Venetian Neoria, where war galleys were built and laid up over winter. The Moro shipyard at the east end is the Maritime Museum's annex, holding the Minoa, a nail-free replica of a Bronze Age ship that was rowed and sailed from Chania to Piraeus for the 2004 Olympics. The Grand Arsenal, restored as the Center of Mediterranean Architecture, stands just west.",
+  "dnd": "The dragon pens: a row of vaults where the Republic kept its war galleys out of the weather.",
+  "hours": "Moro shipyard annex €3, open to 31 October (check the door); Grand Arsenal weekdays about 08:00 to 15:00 when an exhibition is on",
+  "src": "https://www.chaniavisit.com/maritime-museum-of-crete-chania/"
+ },
+ {
+  "n": 6,
+  "cat": "route",
+  "also": [
+   "view",
+   "history"
+  ],
+  "name": "The lighthouse",
+  "lat": 35.51952,
+  "lon": 24.0167,
+  "aud": "lighthouse",
+  "sub": "Out along the breakwater to the lighthouse. About 600 m each way; skip it in a storm or spray.",
+  "blurb": "The Venetians lit the harbour mouth in the 16th century; the slim stone tower you see was rebuilt by the Egyptian administration of Crete around 1839, which is why it looks a little like a minaret. Walk the breakwater from the east side of the harbour for the classic view back over the whole Venetian waterfront. Uneven stone, no railings, slippery when wet.",
+  "dnd": "The beacon at the end of the mole: the last thing a homecoming galley saw.",
+  "hours": "Breakwater open; the tower itself is not",
+  "src": "https://www.oreotravel.com/blog/chania-lighthouse/"
+ },
+ {
+  "n": 7,
+  "cat": "route",
+  "also": [
+   "history"
+  ],
+  "name": "Kioutsouk Hasan mosque (Yiali Tzamisi)",
+  "lat": 35.51768,
+  "lon": 24.01852,
+  "aud": "mosque",
+  "sub": "The domed mosque on the harbour, the oldest Ottoman building on Crete.",
+  "blurb": "Built just after the Ottoman conquest of 1645 and named for the town's first Ottoman commander, the \"mosque by the sea\" lost its minaret in the 1920s but kept its domes. It now opens only for exhibitions.",
+  "hours": "Opens only for exhibitions; look for a sign",
+  "src": "https://chaniahistory.gr/en/giali-tzamisi/"
+ },
+ {
+  "n": 8,
+  "cat": "route",
+  "also": [
+   "history"
+  ],
+  "name": "Firkas fortress and the Maritime Museum of Crete",
+  "lat": 35.51818,
+  "lon": 24.01595,
+  "aud": "firkas",
+  "sub": "Where the Greek flag went up over Crete in 1913. Ship models from the Minoans to the Battle of Crete.",
+  "blurb": "The Venetian bastion at the west mouth of the harbour, later an Ottoman barracks and prison. On 1 December 1913 the Greek flag was raised here to mark Crete's union with Greece. Inside the gate, the Maritime Museum of Crete runs from Bronze Age ship models through Venetian galleys to a gallery on the Battle of Crete in 1941. A good place to be when the rain comes.",
+  "dnd": "The keep where the island finally chose its banner.",
+  "hours": "09:00 to 17:00, €4",
+  "src": "https://www.chaniavisit.com/maritime-museum-of-crete-chania/"
+ },
+ {
+  "n": 9,
+  "cat": "route",
+  "also": [
+   "history"
+  ],
+  "name": "Etz Hayyim synagogue",
+  "lat": 35.51579,
+  "lon": 24.01669,
+  "aud": "synagogue",
+  "sub": "The last synagogue on Crete, in the old Jewish quarter. Closes at 15:00 today.",
+  "blurb": "A Venetian church that became the synagogue of Chania's Jewish quarter, Evraiki. Its congregation was deported in 1944 and lost at sea; the building was restored and reopened in 1999 as a place of prayer and memory. Visits include a short tour by the staff.",
+  "hours": "Friday 10:00 to 15:00, €4 including a short tour; photograph the building, no selfies",
+  "src": "https://www.etz-hayyim-hania.org/visitor-information/"
+ },
+ {
+  "n": 10,
+  "cat": "route",
+  "also": [
+   "minoan"
+  ],
+  "name": "Archaeological Museum of Chania (Chalepa)",
+  "lat": 35.51672,
+  "lon": 24.03684,
+  "aud": "museum",
+  "offroute": true,
+  "sub": "The Minoan finds from Kastelli, indoors. 25 minutes on foot east, or a short taxi. The rainy-afternoon stop.",
+  "blurb": "The new museum, opened in 2022 at Skra 15 in Chalepa, holds what came out of the ground on Kastelli: Linear A and Linear B tablets, the Master Impression, Minoan pottery and coffins, then Greek, Roman and later Chania. Allow an hour and a half. A taxi from the harbour is a few minutes; from here a taxi to Souda is the easiest way back to the ship.",
+  "hours": "08:00 to 20:00, €15 with audio guide",
+  "src": "https://archaeologicalmuseums.gr/en/museum/5df34af3deca5e2d79e8c161/archaeological-museum-of-chania"
+ },
+ {
+  "cat": "food",
+  "name": "Tamam",
+  "lat": 35.51652,
+  "lon": 24.0163,
+  "sub": "Cretan and Ottoman cooking in an old hammam. Indoors: the rainy lunch.",
+  "blurb": "Zambeliou 49, two minutes from Etz Hayyim. Cretan-Ottoman dishes under the vaults of a former bathhouse.",
+  "src": "https://www.tripadvisor.com/Restaurants-g189415-Chania_Town.html"
+ },
+ {
+  "cat": "food",
+  "name": "To Maridaki",
+  "lat": 35.51594,
+  "lon": 24.02141,
+  "sub": "Fish and Cretan taverna popular with locals, near Splantzia.",
+  "blurb": "Daskalogianni 33. Small fried fish, dakos, greens; busy at lunch.",
+  "src": "https://creteinsider.com/chania-restaurants-crete/"
+ },
+ {
+  "cat": "coffee",
+  "name": "Platanos, Plateia 1821",
+  "lat": 35.51637,
+  "lon": 24.02154,
+  "sub": "Coffee or raki under the plane tree, facing the minaret.",
+  "blurb": "Tables in Splantzia square, facing Agios Nikolaos.",
+  "src": "https://www.tripadvisor.com/Restaurant_Review-g189415-d4794767-Reviews-Platanos_Splantzia-Chania_Town_Chania_Prefecture_Crete.html"
+ },
+ {
+  "cat": "coffee",
+  "name": "Bougatsa Iordanis",
+  "lat": 35.51297,
+  "lon": 24.01923,
+  "sub": "Chania-style bougatsa, sweet or with mizithra. Breakfast off the shuttle.",
+  "blurb": "Apokoronou 24, near the market and the bus station. Sells only bougatsa and often sells out by noon. Location approximate.",
+  "src": "https://greektriplanner.me/blog/best-restaurants-in-chania"
+ },
+ {
+  "cat": "history",
+  "name": "Byzantine Collection (San Salvatore)",
+  "lat": 35.51822,
+  "lon": 24.01421,
+  "sub": "Icons and mosaics in a Venetian church on the western bastion.",
+  "blurb": "Theotokopoulou 78, just west of Firkas. A small, quiet collection.",
+  "hours": "08:30 to 15:30, €5",
+  "src": "https://archaeologicalmuseums.gr/en/museum/5df34af3deca5e2d79e8c160"
+ },
+ {
+  "cat": "history",
+  "name": "Sabbionara bastion",
+  "lat": 35.51867,
+  "lon": 24.02416,
+  "sub": "The Venetian bastion at the east end of the harbour.",
+  "blurb": "The north-east corner of the Venetian walls.",
+  "src": "https://en.wikipedia.org/wiki/Chania"
+ },
+ {
+  "cat": "history",
+  "name": "Souda Bay War Cemetery",
+  "lat": 35.50007,
+  "lon": 24.06121,
+  "sub": "Commonwealth graves of the Battle of Crete, 1941, by the bay.",
+  "blurb": "About 1.5 km from the port, on the water. Over 1,500 Commonwealth burials, many from the Battle of Crete in May 1941.",
+  "src": "https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/2017000/suda-bay-war-cemetery/"
+ },
+ {
+  "cat": "practical",
+  "name": "Kydonias bus station and 1866 Square",
+  "lat": 35.51184,
+  "lon": 24.01689,
+  "sub": "Possible shuttle stop; taxis; KTEL buses.",
+  "blurb": "The long-distance bus station and the park of 1866 Square, a few minutes south-west of the market. Some shuttles set down here.",
+  "src": "https://www.dorisvisits.com/souda-bay/"
+ }
+]
